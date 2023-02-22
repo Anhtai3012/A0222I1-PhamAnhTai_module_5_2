@@ -1,0 +1,11 @@
+<p>calculator works!</p>
+<input #element1 type="number"  (change)="fristNumber(element1.value)">
+<select #operator (change)="onOperator(operator.value)">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<input #element2 type="number"  (change)="secoundNumber(element2.value)">
+<button (click)="resultNumber()" >Result</button>
+<h5>{{result}}</h5>

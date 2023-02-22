@@ -1,0 +1,62 @@
+.header-content {
+  padding-top: 10px;
+  padding-bottom: 12px;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.catalog-widget {
+  position: relative;
+  min-height: 86px;
+  display: inline-block;
+  top: 4px;
+}
+.catalog-widget-inside {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 210px;
+  -webkit-box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+  box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+  background-color: #fff;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+.widget-tripadvisor {
+  padding: 15px 0 15px 25px;
+  width: 176px;
+  height: 82px;
+}
+.widget-tripadvisor .inside {
+  position: relative;
+}
+.widget-tripadvisor-logo {
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 80px;
+}
+.widget-tripadvisor-rating {
+  position: absolute;
+  top: 19px;
+  left: -1px;
+  width: 75px;
+}
+.widget-tripadvisor-text {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  font-size: 12px;
+}
+.header-contact {
+  font-size: 13px;
+  line-height: 1.6em;
+  position: relative;
+  top: 5px;
+}
+.header-contact-icon {
+  min-width: 28px;
+}

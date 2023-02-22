@@ -1,0 +1,32 @@
+
+<h2 style="text-align: center; color: cadetblue" >Today 's article</h2>
+<hr>
+<div class="margin" *ngFor="let art of articles">
+  <a href="{{art.url}}" target="_blank">{{art.title}}</a>:<app-like></app-like>
+</div>
+<hr>
+
+<div class="margin">
+  <h2 style="color: cadetblue">Article Information</h2>
+  <table>
+    <tr>
+      <td>Title:</td>
+      <td><textarea [(ngModel)]="article.title"  cols="100%" rows="5"></textarea></td>
+    </tr>
+    <tr>
+      <td>Url:</td>
+      <td>
+        <textarea [(ngModel)]="article.url" cols="100%" rows="5"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button style="float: right" (click)="addNewArticle()" class=" btn btn-info">Add</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<hr>
+
+

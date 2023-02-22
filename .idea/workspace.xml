@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e7832566-9e4c-496c-9e30-0fb33b229e35" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Phone/src/PhoneDemo/src/model/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PhoneDemo/src/Mobile/controller/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PhoneDemo/src/SmartPhone/FileUtils/FileHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PhoneDemo/src/SmartPhone/FileUtils/mobiles.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PhoneDemo/src/SmartPhone/controller/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PhoneDemo/src/SmartPhone/model/Authentic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PhoneDemo/src/SmartPhone/model/Handed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PhoneDemo/src/SmartPhone/model/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PhoneDemo/src/SmartPhone/service/ServicePhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TestMorning/src/TEST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/gradient/gradient.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/gradient/gradient.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/gradient/gradient.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/gradient/gradient.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/gradient/gradient.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/gradient/gradient.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/navbar/navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/css3gen/src/app/navbar/navbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_angular/exercise/pickr/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ss3_angular/exercise/pickr/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A0222I2-Ph-m-Anh-T-i1" beforeDir="false" afterPath="$PROJECT_DIR$/../A0222I2-Ph-m-Anh-T-i1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../luyen_tap_mang_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/moulde_2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_1_introduction_java/exercise/e1/Name.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_1_introduction_java/exercise/e2/Number_convert_Chart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_1_introduction_java/exercise/e3/Currency_conversion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_1_introduction_java/practice/p1/Displaysystemtime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_1_introduction_java/practice/p2/Variable_datatype.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_1_introduction_java/practice/p3/operator_expression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_1_introduction_java/practice/p4/Linear_equation_resolver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_1_introduction_java/practice/p5/day_of_month.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_1_introduction_java/practice/p6/Leap_year.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_1_introduction_java/practice/p7/BMI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_2_loop/exercise/e1/Primitive_number.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_2_loop/exercise/e2/Shape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/out/production/moulde_2/_2_loop/exercise/e3/Primitive_number_smaller_100.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_1_introduction_java/exercise/e1/Name.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_1_introduction_java/exercise/e2/Number_convert_Chart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_1_introduction_java/exercise/e3/Currency_conversion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_1_introduction_java/practice/p1/Displaysystemtime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_1_introduction_java/practice/p2/Variable_datatype.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_1_introduction_java/practice/p3/operator_expression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_1_introduction_java/practice/p4/Linear_equation_resolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_1_introduction_java/practice/p5/day_of_month.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_1_introduction_java/practice/p6/Leap_year.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_1_introduction_java/practice/p7/BMI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_2_loop/exercise/e1/Primitive_number.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_2_loop/exercise/e2/Shape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../moulde_2/src/_2_loop/exercise/e3/Primitive_number_smaller_100.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2M02NjyWcl7pcyoIq2JRxtkSLZe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../A0222I1-PhamAnhTai_module_5/ss3_angular/exercise/angular-calculator-master" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7832566-9e4c-496c-9e30-0fb33b229e35" name="Default Changelist" comment="" />
+      <created>1676890140710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676890140710</updated>
+      <workItem from="1676890142060" duration="98000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/ss2_typescript/practice/typescript-is-prime/src/index.js" />
+        <option value="$PROJECT_DIR$/ss2_typescript/practice/typescript-control-flow-and-loop/src/main.js" />
+        <option value="$PROJECT_DIR$/ss2_typescript/practice/typescript-variable/src/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1676890239527">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1676890239527" />
+  </component>
+</project>
