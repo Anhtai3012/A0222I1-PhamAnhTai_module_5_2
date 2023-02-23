@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
+  "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "angular-furama": {
+    "angular-rating-bar": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-furama",
+            "outputPath": "dist/angular-rating-bar",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,12 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "D:\\CODEGYM\\A0222I1-PhamAnhTai_module_5_2\\case_study\\angular-furama\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "D:\\CODEGYM\\A0222I1-PhamAnhTai_module_5_2\\case_study\\angular-furama\\node_modules\\bootstrap\\dist\\js\\bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -65,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-furama:build"
+            "browserTarget": "angular-rating-bar:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-furama:build:production"
+              "browserTarget": "angular-rating-bar:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-furama:build"
+            "browserTarget": "angular-rating-bar:build"
           }
         },
         "test": {
@@ -113,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-furama:serve"
+            "devServerTarget": "angular-rating-bar:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-furama:serve:production"
+              "devServerTarget": "angular-rating-bar:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angular-furama"
+  "defaultProject": "angular-rating-bar"
 }
