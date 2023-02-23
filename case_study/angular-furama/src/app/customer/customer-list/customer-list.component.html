@@ -1,1 +1,84 @@
-<p>customer-list works!</p>
+<app-header></app-header>
+<div class="container">
+  <app-search (searchTextChange)="onSearchTextEntered($event)"></app-search>
+ <button type="button" class="btn btn-success" style="margin-top: 20px">Add New</button>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Code</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Identify Number</th>
+      <th scope="col">Email</th>
+      <th scope="col">Date of birth</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of customers , index as i">
+    <tr *ngIf="searchText === '' || item.fullName.toLowerCase().includes(searchText)">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.customerCode}}</td>
+        <td>{{item.fullName | titlecase}}</td>
+        <td>{{item.phoneNumber}}</td>
+        <td>{{item.identifyNumber}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.dateOfBirth | date:'dd-MM-yyyy'}}</td>
+        <td>
+          <button type="button" class="btn btn-primary bi bi-pencil-square"></button>
+          <button type="button" class="btn btn-danger bi bi-trash"></button>
+          <!--        <button type="button" class="btn btn-info bi bi-arrow-up-right-circle-fill" data-toggle="modal" data-target="#exampleModal" (click)="detailInfo(item)"></button>-->
+        </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--  <div class="modal-dialog">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLabel">New message</h5>-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true"></span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        <form>-->
+<!--          <div class="form-group">-->
+<!--            <label for="id" class="col-form-label">Recipient:</label>-->
+<!--            <input type="text" class="form-control" id="id" value="{{customer.id}}">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label for="code" class="col-form-label">Code:</label>-->
+<!--            <input type="text" class="form-control" id="code" value="{{customer.customerCode}}">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label for="name" class="col-form-label">Name:</label>-->
+<!--            <input type="text" class="form-control" id="name" value="{{customer.fullName}}">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label for="phone" class="col-form-label">Phone:</label>-->
+<!--            <input type="text" class="form-control" id="phone" value="{{customer.phoneNumber}}">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label for="identify" class="col-form-label">Identify Number:</label>-->
+<!--            <input type="text" class="form-control" id="identify" value="{{customer.identifyNumber}}">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label for="email" class="col-form-label">Email:</label>-->
+<!--            <input type="text" class="form-control" id="email" value="{{customer.email}}">-->
+<!--          </div>-->
+<!--          <div class="form-group">-->
+<!--            <label for="date" class="col-form-label">Date of birth</label>-->
+<!--            <input type="text" class="form-control" id="date" value="{{customer.dateOfBirth | date:'MMM dd-MM-yyyy, h:mm:ss a'}}">-->
+<!--          </div>-->
+
+<!--        </form>-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

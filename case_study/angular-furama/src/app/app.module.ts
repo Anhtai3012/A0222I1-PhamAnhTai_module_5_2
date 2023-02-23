@@ -8,6 +8,8 @@ import {FooterComponent} from "./footer/footer.component";
 import { HeaderComponent } from './header/header.component';
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
 import { ContractListComponent } from './contract/contract-list/contract-list.component';
+import {FormsModule} from "@angular/forms";
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,14 @@ import { ContractListComponent } from './contract/contract-list/contract-list.co
     FooterComponent,
     HeaderComponent,
     CustomerListComponent,
-    ContractListComponent
+    ContractListComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
