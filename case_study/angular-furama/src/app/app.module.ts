@@ -10,6 +10,8 @@ import { CustomerListComponent } from './customer/customer-list/customer-list.co
 import { ContractListComponent } from './contract/contract-list/contract-list.component';
 import {FormsModule} from "@angular/forms";
 import { SearchComponent } from './search/search.component';
+import { SaveFacilityComponent } from './contract/save-contract/save-facility.component';
+import { FacilityListComponent } from './facility/facility-list/facility-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SearchComponent } from './search/search.component';
     HeaderComponent,
     CustomerListComponent,
     ContractListComponent,
-    SearchComponent
+    SearchComponent,
+    SaveFacilityComponent,
+    FacilityListComponent
   ],
   imports: [
     BrowserModule,

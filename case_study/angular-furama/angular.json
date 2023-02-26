@@ -28,7 +28,8 @@
               "D:\\CODEGYM\\A0222I1-PhamAnhTai_module_5_2\\case_study\\angular-furama\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css"
             ],
             "scripts": [
-              "D:\\CODEGYM\\A0222I1-PhamAnhTai_module_5_2\\case_study\\angular-furama\\node_modules\\bootstrap\\dist\\js\\bootstrap.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {

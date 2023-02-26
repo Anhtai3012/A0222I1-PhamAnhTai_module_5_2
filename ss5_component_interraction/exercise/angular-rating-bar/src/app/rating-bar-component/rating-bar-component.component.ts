@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-rating-bar-component',
@@ -12,4 +13,11 @@ export class RatingBarComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ratingNumber:number;
+
+  ratingControl = new FormControl(0)
+
+  getRating() {
+    this.ratingNumber = this.ratingControl.value
+  }
 }

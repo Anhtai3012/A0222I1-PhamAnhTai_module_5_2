@@ -21,6 +21,7 @@ export class CustomerListComponent implements OnInit {
   }
 
   detailInfo(item:Customer) {
+    console.log('com here')
     this.customer=item;
   }
 
@@ -28,7 +29,7 @@ export class CustomerListComponent implements OnInit {
 
   onSearchTextEntered(searchValue:string){
     this.searchText = searchValue;
-    console.log(this.searchText)
+    console.log(this.searchText);
   }
 
 
