@@ -67,11 +67,16 @@
         <a class="nav-link" href="#">Service<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Customer</a>
+        <a class="nav-link" [routerLink]="['/customer-list']">Customer</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link" [routerLink]="['/contract-list']">
           Contract
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" [routerLink]="['/facility-list']">
+         Facility
         </a>
       </li>
     </ul>

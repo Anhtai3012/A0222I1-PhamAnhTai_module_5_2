@@ -1,1 +1,41 @@
-<p>facility-list works!</p>
+<app-header>
+</app-header>
+<div class="container">
+  <div class="season one">
+    <p class="text__one"> FACILITY </p>
+  </div>
+  <app-search ></app-search>
+  <button type="button" class="btn btn-success" style="margin-top: 20px">Add New</button>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Description</th>
+      <th scope="col">Pool Area</th>
+      <th scope="col">Status</th>
+      <th scope="col">Floor</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of facilitys , index as i">
+    <tr>
+      <th scope="row">{{i+1}}</th>
+      <td>{{item.name | titlecase}}</td>
+      <td>{{item.cost}}</td>
+      <td>{{item.description}}</td>
+      <td>{{item.poolArea}}</td>
+      <td>{{item.status}}</td>
+      <td>{{item.floor}}</td>
+      <td>
+        <button type="button" class="btn btn-primary bi bi-pencil-square"></button>
+        <button type="button" class="btn btn-danger bi bi-trash"></button>
+        <button type="button" class="btn btn-info bi bi-arrow-up-right-circle-fill" data-toggle="modal" data-target="#exampleModal"></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer>
+</app-footer>

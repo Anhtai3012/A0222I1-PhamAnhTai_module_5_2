@@ -1,1 +1,63 @@
-<p>contract-list works!</p>
+<app-header>
+</app-header>
+<div class="container">
+  <div class="season one">
+    <p class="text__one"> CONTRACT </p>
+  </div>
+  <app-search ></app-search>
+  <button type="button" class="btn btn-success" style="margin-top: 20px">Add New</button>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Code</th>
+      <th scope="col">Customer Code</th>
+      <th scope="col">Facility Code</th>
+      <th scope="col">Start Day</th>
+      <th scope="col">End Day</th>
+      <th scope="col">Deposit</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of contracts , index as i">
+    <tr>
+      <th scope="row">{{i+1}}</th>
+      <td>{{item.contractCode}}</td>
+      <td>{{item.customerCode}}</td>
+      <td>{{item.facilityCode}}</td>
+      <td>{{item.startDay | date:'dd-MM-yyyy'}}</td>
+      <td>{{item.endDay | date:'dd-MM-yyyy'}}</td>
+      <td>{{item.deposit | currency:"VND":true:'4.2-2'}}</td>
+      <td>
+        <button type="button" class="btn btn-primary bi bi-pencil-square"></button>
+        <button type="button" class="btn btn-danger bi bi-trash" (click)="takeId(i)" data-toggle="modal" data-target="#delete"></button>
+        <button type="button" class="btn btn-info bi bi-arrow-up-right-circle-fill" data-toggle="modal" data-target="#exampleModal"></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        I want to delete this record
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="delete()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer>
+</app-footer>

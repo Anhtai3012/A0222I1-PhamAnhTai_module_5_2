@@ -7,15 +7,18 @@ import {Customer} from "../../model/customer";
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
-
+ date:Date = new Date();
   customer:Customer;
   customers: Customer [] = [
     {id:1,fullName:'pham anh tai',customerCode:'KH-123',phoneNumber:"0905941637",identifyNumber:'123456',email:'mkhanhaa@gmail.com',dateOfBirth:new Date()},
     {id:2,fullName:'do tien thanh',customerCode:'KH-123',phoneNumber:'0905941637',identifyNumber:'123456',email:'mkhanhaa@gmail.com',dateOfBirth:new Date()},
     {id:3,fullName:'nguyen khai',customerCode:'KH-123',phoneNumber:'0905941637',identifyNumber:'123456',email:'mkhanhaa@gmail.com',dateOfBirth:new Date()},
     {id:4,fullName:'pham the duyet',customerCode:'KH-123',phoneNumber:'0905941637',identifyNumber:'123456',email:'mkhanhaa@gmail.com',dateOfBirth:new Date()},
+    {id:4,fullName:'LE DUC HIEU',customerCode:'KH-124',phoneNumber:'0905941637',identifyNumber:'123456',email:'mkhanhaa@gmail.com',dateOfBirth:new Date()}
   ]
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }
@@ -32,5 +35,13 @@ export class CustomerListComponent implements OnInit {
     console.log(this.searchText);
   }
 
+  temp: number;
+  delete() {
+    this.customers.splice(this.temp,1)
+  }
 
+  takeId(i: any) {
+    this.temp = i;
+    console.log(i)
+  }
 }

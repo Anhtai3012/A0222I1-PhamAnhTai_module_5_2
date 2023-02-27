@@ -8,10 +8,12 @@ import {FooterComponent} from "./footer/footer.component";
 import { HeaderComponent } from './header/header.component';
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
 import { ContractListComponent } from './contract/contract-list/contract-list.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { SearchComponent } from './search/search.component';
 import { SaveFacilityComponent } from './contract/save-contract/save-facility.component';
 import { FacilityListComponent } from './facility/facility-list/facility-list.component';
+import { CustomerSaveComponent } from './customer/customer-save/customer-save.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -23,12 +25,15 @@ import { FacilityListComponent } from './facility/facility-list/facility-list.co
     ContractListComponent,
     SearchComponent,
     SaveFacilityComponent,
-    FacilityListComponent
+    FacilityListComponent,
+    CustomerSaveComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
 
   ],
   providers: [],

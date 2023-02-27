@@ -1,5 +1,8 @@
 <app-header></app-header>
 <div class="container">
+  <div class="season one">
+    <p class="text__one"> CUSTOMER </p>
+  </div>
   <app-search (searchTextChange)="onSearchTextEntered($event)"></app-search>
  <button type="button" class="btn btn-success" style="margin-top: 20px">Add New</button>
   <table class="table table-hover">
@@ -26,7 +29,7 @@
         <td>{{item.dateOfBirth | date:'dd-MM-yyyy'}}</td>
         <td>
           <button type="button" class="btn btn-primary bi bi-pencil-square"></button>
-          <button type="button" class="btn btn-danger bi bi-trash"></button>
+          <button type="button" class="btn btn-danger bi bi-trash" (click)="takeId(i)" data-toggle="modal" data-target="#delete"></button>
           <button type="button" class="btn btn-info bi bi-arrow-up-right-circle-fill" data-toggle="modal" data-target="#exampleModal" (click)="detailInfo(item)"></button>
         </td>
     </tr>
@@ -83,3 +86,25 @@
     </div>
   </div>
 </div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        I want to delete this record
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="delete()">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
