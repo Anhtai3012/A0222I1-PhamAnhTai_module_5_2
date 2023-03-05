@@ -63,11 +63,10 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Service<span class="sr-only">(current)</span></a>
-      </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/customer-list']">Customer</a>
+        <a class="nav-link" [routerLink]="['/customer-list']">
+          Customer
+        </a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link" [routerLink]="['/contract-list']">
@@ -77,6 +76,11 @@
       <li class="nav-item dropdown">
         <a class="nav-link" [routerLink]="['/facility-list']">
          Facility
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" [routerLink]="['/employee-list']">
+         Employee
         </a>
       </li>
     </ul>

@@ -14,6 +14,8 @@ import { SaveFacilityComponent } from './contract/save-contract/save-facility.co
 import { FacilityListComponent } from './facility/facility-list/facility-list.component';
 import { CustomerSaveComponent } from './customer/customer-save/customer-save.component';
 import {RouterModule} from "@angular/router";
+import { EmployeeList4Component } from './employee/employee-list4/employee-list4.component';
+import { EmployeeSaveComponent } from './employee/employee-save/employee-save.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import {RouterModule} from "@angular/router";
     SearchComponent,
     SaveFacilityComponent,
     FacilityListComponent,
-    CustomerSaveComponent
+    CustomerSaveComponent,
+    EmployeeList4Component,
+    EmployeeSaveComponent
   ],
   imports: [
     BrowserModule,

@@ -64,43 +64,7 @@ export class RegisterComponent implements OnInit {
     {id: '3', value: 'Other'}
   ]
 
-  // registerForm = new FormGroup({
-  //   firstname: new FormControl('',[
-  //     Validators.minLength(2),
-  //     Validators.maxLength(10),
-  //     Validators.required
-  //   ]),
-  //   lastname: new FormControl('',[
-  //     Validators.minLength(2),
-  //     Validators.maxLength(10),
-  //     Validators.required
-  //   ]),
-  //   age: new FormControl('',[
-  //     Validators.min(18),
-  //     Validators.max(100)
-  //   ]),
-  //   email: new FormControl("",[
-  //     Validators.email,
-  //     Validators.minLength(8)
-  //   ]),
-  //   address: new FormControl("",[
-  //     Validators.minLength(3),
-  //     Validators.maxLength(20),
-  //     Validators.required
-  //   ]),
-  //   phone: new FormControl('',[
-  //     Validators.min(10),
-  //     Validators.max(12),
-  //     Validators.required
-  //   ]),
-  //   gender: new FormControl('',[]),
-  //   password: new FormControl('',[
-  //     Validators.required,
-  //     Validators.minLength(6),
-  //     Validators.maxLength(15),
-  //   ]),
-  //   repeatpassword: new FormControl('')
-  // });
+
 
  get Firstname(){
    return this.registerForm.get("firstname")
