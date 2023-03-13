@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {Customer} from "../../model/customer";
-import {Employee} from "../employee";
+import {Employee} from "../../model/employee";
+import {EmployeeService} from "../../service/employee.service";
+import {PositionEmployeeService} from "../../service/position-employee.service";
+import {PositionEmployee} from "../../model/position-employee";
+import * as alertify from 'alertifyjs'
+
+
 
 @Component({
   selector: 'app-employee-list4',
@@ -8,17 +13,45 @@ import {Employee} from "../employee";
   styleUrls: ['./employee-list4.component.css']
 })
 export class EmployeeList4Component implements OnInit {
+
+  page: number = 1;
+  count: number = 0;
+  tableSize: number = 3;
+
   employees:Employee []
-  constructor() {
-    this.employees = [
-      {id:1,fullName:"hello",dateOfBirth: new Date(2002,11,30),code:11111,numberPhone:'0905941637',email:"mkhanhaa@gamil.com",certificate:"trung cấp",place:"manager",salary:3000},
-      {id:2,fullName:"hello",dateOfBirth: new Date(2002,9,5),code:11111,numberPhone:'0905941637',email:"mkhanhaa@gamil.com",certificate:"trung cấp",place:"manager",salary:3000},
-      {id:3,fullName:"hello",dateOfBirth: new Date(2002,1,30),code:11111,numberPhone:'0905941637',email:"mkhanhaa@gamil.com",certificate:"trung cấp",place:"manager",salary:3000},
-      {id:4,fullName:"hello",dateOfBirth: new Date(2002,2,30),code:11111,numberPhone:'0905941637',email:"mkhanhaa@gamil.com",certificate:"trung cấp",place:"manager",salary:3000},
-      {id:5,fullName:"hello",dateOfBirth: new Date(2002,3,30),code:11111,numberPhone:'0905941637',email:"mkhanhaa@gamil.com",certificate:"trung cấp",place:"manager",salary:3000}
-    ]
+  positions:PositionEmployee[] = [];
+  constructor(private employeeService:EmployeeService,
+              private positionEmployeeService: PositionEmployeeService) {
   }
 
   ngOnInit(): void {
+    this.findAll();
   }
+  findAll(){
+    this.positions = this.positionEmployeeService.getAll();
+    this.employeeService.getAll().subscribe(next => {
+      this.employees=next;
+    })
+  }
+
+  deleteEmployee(id: number) {
+    alertify.confirm("Remove Employee", "do you want remove this employee?", () => {
+     this.employeeService.deleteEmployee(id).subscribe(next =>{
+       console.log('delete')
+       this.ngOnInit();
+     })
+    }, function () {})
+  }
+
+  searchText: string='';
+  onSearchTextEntered(searchValue:string){
+    this.searchText = searchValue;
+    console.log(this.searchText);
+  }
+
+  onTableDataChange(event: any) {
+    this.page = event;
+    this.findAll();
+  }
+
 }

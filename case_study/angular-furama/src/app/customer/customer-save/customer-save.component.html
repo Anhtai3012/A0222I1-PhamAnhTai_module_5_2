@@ -1,1 +1,59 @@
-<p>customer-save works!</p>
+<div class="form">
+  <h2 id="registration">Create Customer</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="submitCustomer()">
+
+    <div class="">
+      <label for="id">customerCode:</label>
+      <input type="text" class="form-control" id="id" formControlName="id" disabled>
+      <div class="form-text text-danger" >
+      </div>
+    </div>
+
+    <div class="">
+      <label for="customerCode">customerCode:</label>
+      <input type="text" class="form-control" id="customerCode" formControlName="customerCode">
+      <div class="form-text text-danger" *ngIf="!this.registerForm.controls.customerCode?.valid && (this.registerForm.controls.customerCode?.dirty || this.registerForm.controls.customerCode?.touched)">
+       Error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="fullName">fullName:</label>
+      <input type="text" class="form-control" id="fullName" formControlName="fullName">
+      <div class="form-text text-danger" *ngIf="!this.registerForm.controls.fullName?.valid && (this.registerForm.controls.fullName?.dirty || this.registerForm.controls.fullName?.touched)">
+        error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="phoneNumber">phoneNumber:</label>
+      <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber">
+      <div class="form-text text-danger" *ngIf="!this.registerForm.controls.phoneNumber?.valid && (this.registerForm.controls.phoneNumber?.dirty || this.registerForm.controls.phoneNumber?.touched)">
+        error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="identifyNumber">identifyNumber:</label>
+      <input type="number" class="form-control" id="identifyNumber" formControlName="identifyNumber">
+      <div class="form-text text-danger" *ngIf="!this.registerForm.controls.identifyNumber?.valid && (this.registerForm.controls.identifyNumber?.dirty || this.registerForm.controls.identifyNumber?.touched)">
+        error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="email">email:</label>
+      <input type="text" class="form-control" id="email" formControlName="email" >
+      <div class="form-text text-danger" *ngIf="!this.registerForm.controls.email?.valid && (this.registerForm.controls.email?.dirty || this.registerForm.controls.email?.touched)">
+        error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="dateOfBirth">dateOfBirth:</label>
+      <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

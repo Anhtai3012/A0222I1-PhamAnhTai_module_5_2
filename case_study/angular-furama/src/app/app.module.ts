@@ -16,6 +16,10 @@ import { CustomerSaveComponent } from './customer/customer-save/customer-save.co
 import {RouterModule} from "@angular/router";
 import { EmployeeList4Component } from './employee/employee-list4/employee-list4.component';
 import { EmployeeSaveComponent } from './employee/employee-save/employee-save.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {ToastrModule} from "ngx-toastr";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -38,7 +42,14 @@ import { EmployeeSaveComponent } from './employee/employee-save/employee-save.co
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }),
+      NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

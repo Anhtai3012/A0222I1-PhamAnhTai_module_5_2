@@ -25,7 +25,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "D:\\CODEGYM\\A0222I1-PhamAnhTai_module_5_2\\case_study\\angular-furama\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css"
+              "D:\\CODEGYM\\A0222I1-PhamAnhTai_module_5_2\\case_study\\angular-furama\\node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

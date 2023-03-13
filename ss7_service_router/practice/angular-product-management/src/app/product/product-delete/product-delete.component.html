@@ -4,23 +4,23 @@
   <table>
     <tr>
       <td>Ma san pham:</td>
-      <td><input type="number" ></td>
+      <td><input type="text" disabled value="{{product.id}}"></td>
     </tr>
     <tr>
       <td>Tên sản phẩm:</td>
-      <td><input type="text"></td>
+      <td><input type="text" disabled value="{{product.name}}"></td>
     </tr>
     <tr>
       <td>Giá sản phẩm</td>
-      <td><input type="number"></td>
+      <td><input type="text" disabled value="{{product.price}}"></td>
     </tr>
     <tr>
       <td>Mô tả về sản phẩm</td>
-      <td><input type="text"></td>
+      <td><input type="text" disabled value="{{product.description}}" ></td>
     </tr>
     <tr>
       <td></td>
-      <td><button type="submit">Save</button></td>
+      <td><button type="submit" (click)="delete()">Save</button></td>
     </tr>
   </table>
 </form>

@@ -6,36 +6,21 @@
   </div>
   <app-search ></app-search>
   <button type="button" class="btn btn-success" style="margin-top: 20px">Add New</button>
-  <table class="table table-hover">
-    <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Cost</th>
-      <th scope="col">Description</th>
-      <th scope="col">Pool Area</th>
-      <th scope="col">Status</th>
-      <th scope="col">Floor</th>
-      <th scope="col">Action</th>
-    </tr>
-    </thead>
-    <tbody *ngFor="let item of facilitys , index as i">
-    <tr>
-      <th scope="row">{{i+1}}</th>
-      <td>{{item.name | titlecase}}</td>
-      <td>{{item.cost}}</td>
-      <td>{{item.description}}</td>
-      <td>{{item.poolArea}}</td>
-      <td>{{item.status}}</td>
-      <td>{{item.floor}}</td>
-      <td>
-        <button type="button" class="btn btn-primary bi bi-pencil-square"></button>
-        <button type="button" class="btn btn-danger bi bi-trash"></button>
-        <button type="button" class="btn btn-info bi bi-arrow-up-right-circle-fill" data-toggle="modal" data-target="#exampleModal"></button>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+  <div class="container" style="margin:  50px auto auto ">
+    <div class="row" style="text-align: center ; margin-top: 20px" >
+      <div class="col-lg-4" *ngFor="let item of facilitys">
+        <div class="card" style="width: 18rem;">
+          <img src="assets\image-room\furama1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{item.nameService}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{item.cost}}</h6>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-danger">Delete</a>
+            <a href="#" class="btn btn-info">Edit</a>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
 <app-footer>
 </app-footer>

@@ -14,7 +14,7 @@
     <td>{{item.description}}</td>
     <td>
       <button [routerLink]="['/product/edit',item.id]">Edit</button>
-      <button>Delete</button>
+      <button [routerLink]="['/product/delete',item.id]">Delete</button>
     </td>
   </tr>
 </table>

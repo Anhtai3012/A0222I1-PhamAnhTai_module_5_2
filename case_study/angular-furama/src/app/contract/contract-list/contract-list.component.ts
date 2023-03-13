@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Contract} from "../../model/contract";
+import {ContractService} from "../../service/contract.service";
+import {Customer} from "../../model/customer";
+import {Facility} from "../../model/facility";
 
 @Component({
   selector: 'app-contract-list',
@@ -7,19 +10,22 @@ import {Contract} from "../../model/contract";
   styleUrls: ['./contract-list.component.css']
 })
 export class ContractListComponent implements OnInit {
-
-  constructor() { }
+  contracts : Contract[]=[];
+  customers :Customer [] =[];
+  facilitys :Facility [] =[];
+  constructor(private contractService:ContractService) { }
 
   ngOnInit(): void {
+    this.contractService.getAll().subscribe((data)=>{
+      this.contracts = data;
+    })
+    this.contractService.getAllCustomer().subscribe((data) =>{
+      this.customers = data
+    })
+    this.contractService.getAllFacility().subscribe((data) =>{
+      this.facilitys = data
+    })
   }
-
-  contracts: Contract [] = [
-    {id:1,contractCode:'HD-123',customerCode:"KH-123",facilityCode:"CS-123",startDay:new Date(),endDay:new Date(),deposit:12345},
-    {id:2,contractCode:'HD-124',customerCode:"KH-123",facilityCode:"CS-123",startDay:new Date(),endDay:new Date(),deposit:12345},
-    {id:3,contractCode:'HD-125',customerCode:"KH-123",facilityCode:"CS-123",startDay:new Date(),endDay:new Date(),deposit:12345},
-    {id:4,contractCode:'HD-126',customerCode:"KH-123",facilityCode:"CS-123",startDay:new Date(),endDay:new Date(),deposit:12345},
-    {id:5,contractCode:'HD-127',customerCode:"KH-123",facilityCode:"CS-123",startDay:new Date(),endDay:new Date(),deposit:12345},
-  ]
 
   temp:number;
   takeId(value:any) {
@@ -28,7 +34,4 @@ export class ContractListComponent implements OnInit {
   }
 
 
-  delete() {
-    this.contracts.splice(this.temp,1);
-  }
 }

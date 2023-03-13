@@ -23,7 +23,13 @@
     <tr>
       <th scope="row">{{i+1}}</th>
       <td>{{item.contractCode}}</td>
-      <td>{{item.customerCode}}</td>
+      <td>
+        <ng-container *ngFor="let i of customers">
+          <div *ngIf="item.customerCode == i.id">
+            <span>{{i.fullName}}</span>
+          </div>
+        </ng-container>
+      </td>
       <td>{{item.facilityCode}}</td>
       <td>{{item.startDay | date:'dd-MM-yyyy'}}</td>
       <td>{{item.endDay | date:'dd-MM-yyyy'}}</td>
@@ -53,7 +59,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="delete()">Delete</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
       </div>
     </div>
   </div>

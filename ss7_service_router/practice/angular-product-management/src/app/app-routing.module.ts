@@ -14,7 +14,7 @@ const routes: Routes = [
   },
 
   {path:'product/edit/:id',component:ProductUpdateComponent},
-  {path:'delete/:id',component:ProductDeleteComponent},
+  {path:'product/delete/:id',component:ProductDeleteComponent},
   {path:'product/create',component:ProductCreateComponent},
 ];
 

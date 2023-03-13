@@ -1,1 +1,73 @@
-<p>employee-save works!</p>
+
+<div class="form">
+  <h2 id="registration">Create Employee</h2>
+  <form [formGroup]="employeeForm" (ngSubmit)="submitEmployee()">
+
+    <div class="">
+      <label for="id">customerCode:</label>
+      <input type="text" class="form-control" id="id" formControlName="id" >
+
+    </div>
+
+    <div class="">
+      <label for="fullName">fullName:</label>
+      <input type="text" class="form-control" id="fullName" formControlName="fullName">
+      <div class="form-text text-danger" *ngIf=" !this.employeeForm.controls.fullName?.valid && (this.employeeForm.controls.fullName?.touched || this.employeeForm.controls.fullName?.dirty)">
+        Error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="dateOfBirth">dateOfBirth:</label>
+      <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth">
+    </div>
+
+    <div class="">
+      <label for="code">code:</label>
+      <input type="number" class="form-control" id="code" formControlName="code">
+      <div class="form-text text-danger" *ngIf="!this.employeeForm.controls.code?.valid &&(this.employeeForm.controls.code?.touched || this.employeeForm.controls.code?.dirty)">
+        error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="numberPhone">numberPhone:</label>
+      <input type="number" class="form-control" id="numberPhone" formControlName="numberPhone">
+      <div class="form-text text-danger" *ngIf="!this.employeeForm.controls.numberPhone?.valid && (this.employeeForm.controls.numberPhone?.touched || this.employeeForm.controls.numberPhone?.dirty)">
+        error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="email">email:</label>
+      <input type="text" class="form-control" id="email" formControlName="email" >
+      <div class="form-text text-danger" *ngIf="!this.employeeForm.controls.email?.valid && (this.employeeForm.controls.email?.touched || this.employeeForm.controls.email?.dirty)">
+        error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="certificate">certificate:</label>
+      <select id="certificate" class="form-control" formControlName="certificate">
+        <option *ngFor="let item of educationEmployees" [ngValue]="item" selected>{{item.name}}</option>
+      </select>
+    </div>
+
+    <div class="">
+      <label for="place">place:</label>
+      <select id="place" formControlName="place" class="form-control">
+        <option *ngFor="let item of positionEmployees" value="{{item.id}}">{{item.name}}</option>
+      </select>
+    </div>
+
+    <div class="">
+      <label for="salary">salary:</label>
+      <input type="number" class="form-control" id="salary" formControlName="salary">
+      <div class="form-text text-danger"  *ngIf="!this.employeeForm.controls.salary?.valid && (this.employeeForm.controls.salary?.touched || this.employeeForm.controls.salary?.dirty)">
+        error
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
