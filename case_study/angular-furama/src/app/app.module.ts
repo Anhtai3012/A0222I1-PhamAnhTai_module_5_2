@@ -10,7 +10,7 @@ import { CustomerListComponent } from './customer/customer-list/customer-list.co
 import { ContractListComponent } from './contract/contract-list/contract-list.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { SearchComponent } from './search/search.component';
-import { SaveFacilityComponent } from './contract/save-contract/save-facility.component';
+// import { SaveFacilityComponent } from './contract/save-contract/save-facility.component';
 import { FacilityListComponent } from './facility/facility-list/facility-list.component';
 import { CustomerSaveComponent } from './customer/customer-save/customer-save.component';
 import {RouterModule} from "@angular/router";
@@ -20,6 +20,11 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgxPaginationModule} from "ngx-pagination";
+import { SaveContractComponent } from './contract/save-contract/save-contract.component';
+import {SaveFacilityComponent} from "./facility/save-facility/save-facility.component";
+import {NgSearchPipe} from "ng-search-pipe";
+import { SearchFilterPipe } from './search-filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +39,9 @@ import {NgxPaginationModule} from "ngx-pagination";
     FacilityListComponent,
     CustomerSaveComponent,
     EmployeeList4Component,
-    EmployeeSaveComponent
+    EmployeeSaveComponent,
+    SaveContractComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -49,9 +56,12 @@ import {NgxPaginationModule} from "ngx-pagination";
       positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),
-      NgxPaginationModule
+      NgxPaginationModule,
+    NgSearchPipe
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports :[]
 })
-export class AppModule { }
+export class AppModule {
+}

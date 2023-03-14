@@ -36,7 +36,7 @@ export class CustomerSaveComponent implements OnInit {
 
   createCustomer(){
     this.registerForm = new FormGroup({
-      id: new FormControl(this.customers == undefined? '':this.customers.id),
+      id: new FormControl({ value : this.customers == undefined ? '' : this.customers.id, disabled : true}),
       customerCode: new FormControl(this.customers == undefined? '':this.customers.customerCode,[
         Validators.required,
         Validators.min(1)
@@ -61,12 +61,26 @@ export class CustomerSaveComponent implements OnInit {
     });
   }
 
+  // submitCustomer() {
+  //   console.log(this.registerForm.value)
+  //   this.customerService.CreateCustomer(this.registerForm.value).subscribe(next => {
+  //     console.log(next)
+  //     console.log('thanh cong')
+  //     this.toast.success("them moi thanh cong")
+  //     this.router.navigateByUrl("/customer-list")
+  //   },error => {
+  //     console.log("error customer")
+  //   })
+  // }
+
   submitCustomer() {
-    console.log(this.registerForm)
-    this.customerService.CreateCustomer(this.registerForm.value).subscribe(next => {
-      console.log('thanh cong')
-      this.toast.success("them moi thanh cong")
-      this.router.navigateByUrl("/customer-list")
-    })
+
+    this.customerService.CreateCustomer(this.registerForm.value).subscribe(next =>
+      this.router.navigateByUrl("/customer-list").then(result =>{
+        this.registerForm.reset()
+        this.toast.success("them moi thanh cong")
+        }
+      )
+    )
   }
 }

@@ -1,7 +1,8 @@
 
 <div class="form">
+
   <h2 id="registration">Create Employee</h2>
-  <form [formGroup]="employeeForm" (ngSubmit)="submitEmployee()">
+  <form [formGroup]="employeeForm" (ngSubmit)="submitEmployee()" *ngIf="employeeForm">
 
     <div class="">
       <label for="id">customerCode:</label>
@@ -48,7 +49,7 @@
 
     <div class="">
       <label for="certificate">certificate:</label>
-      <select id="certificate" class="form-control" formControlName="certificate">
+      <select id="certificate" class="form-control" formControlName="certificate" [compareWith]="compareFn">
         <option *ngFor="let item of educationEmployees" [ngValue]="item" selected>{{item.name}}</option>
       </select>
     </div>

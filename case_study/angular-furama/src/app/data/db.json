@@ -5,7 +5,7 @@
       "customerCode": "123",
       "fullName": "nguyen khai",
       "phoneNumber": "0905941",
-      "identifyNumber": 124,
+      "identifyNumber": 12421113333333332,
       "email": "mkhanhaa@gamil.com",
       "dateOfBirth": "2002-12-30"
     },
@@ -44,37 +44,45 @@
       "identifyNumber": 12343,
       "email": "mkhanhaa@gmail.com",
       "dateOfBirth": "2023-03-16"
+    },
+    {
+      "id": 7,
+      "customerCode": "1234",
+      "fullName": "Tai Pham",
+      "phoneNumber": "0905941637",
+      "identifyNumber": 12312,
+      "email": "mkhanhaa@gmail.com",
+      "dateOfBirth": "2023-03-03"
+    },
+    {
+      "id": 8,
+      "customerCode": "1234",
+      "fullName": "Tai Pham",
+      "phoneNumber": "0905941637",
+      "identifyNumber": 123342,
+      "email": "mkhanhaa@gmail.com",
+      "dateOfBirth": "2023-03-22"
+    },
+    {
+      "id": 9,
+      "customerCode": "1234",
+      "fullName": "Tai Pham",
+      "phoneNumber": "0905941637",
+      "identifyNumber": 231421,
+      "email": "mkhanhaa@gmail.com",
+      "dateOfBirth": "2023-03-15"
+    },
+    {
+      "customerCode": "321",
+      "fullName": "Tai Pham",
+      "phoneNumber": "0905941637",
+      "identifyNumber": 2413421,
+      "email": "mkhanhaa@gmail.com",
+      "dateOfBirth": "2023-03-24",
+      "id": 10
     }
   ],
   "employees": [
-    {
-      "id": 1,
-      "fullName": "pham anh tai",
-      "dateOfBirth": "2002-12-30",
-      "code": 123,
-      "numberPhone": "0905941",
-      "email": "mkhanhaa@gamil.com",
-      "certificate": {
-        "id": 1,
-        "name": "trung cap"
-      },
-      "place": 1,
-      "salary": 3000
-    },
-    {
-      "id": 2,
-      "fullName": "nguyen khai",
-      "dateOfBirth": "2002-12-30",
-      "code": 123,
-      "numberPhone": "0905941",
-      "email": "mkhanhaa@gamil.com",
-      "certificate": {
-        "id": 1,
-        "name": "trung cap"
-      },
-      "place": 2,
-      "salary": 3000
-    },
     {
       "id": 3,
       "fullName": "pham the duyet",
@@ -104,9 +112,23 @@
       "id": 4
     },
     {
-      "fullName": "Tai Pham Anh",
-      "dateOfBirth": "",
-      "code": 878889,
+      "fullName": "pham anh tai",
+      "dateOfBirth": "2002-12-30",
+      "code": 123,
+      "numberPhone": "0905941",
+      "email": "mkhanhaa@gamil.com",
+      "certificate": {
+        "id": 1,
+        "name": "trung cap"
+      },
+      "place": 1,
+      "salary": 3000,
+      "id": 8
+    },
+    {
+      "fullName": "Tai Pham",
+      "dateOfBirth": "2023-03-16",
+      "code": 312412,
       "numberPhone": 905941637,
       "email": "mkhanhaa@gmail.com",
       "certificate": {
@@ -114,22 +136,36 @@
         "name": "đại học"
       },
       "place": "3",
-      "salary": 7000,
-      "id": 6
+      "salary": 6000,
+      "id": 9
     },
     {
-      "fullName": "Tai Pham Anh Khai",
-      "dateOfBirth": "",
+      "fullName": "Tai Pham",
+      "dateOfBirth": "2023-03-23",
       "code": 878889,
       "numberPhone": 905941637,
       "email": "mkhanhaa@gmail.com",
       "certificate": {
-        "id": 4,
-        "name": "sau đại học"
+        "id": 3,
+        "name": "đại học"
       },
-      "place": "3",
-      "salary": 7001,
-      "id": 7
+      "place": "4",
+      "salary": 6000,
+      "id": 10
+    },
+    {
+      "fullName": "pham anh tai",
+      "dateOfBirth": "2002-12-30",
+      "code": 123,
+      "numberPhone": "0905941",
+      "email": "mkhanhaa@gamil.com",
+      "certificate": {
+        "id": 3,
+        "name": "đại học"
+      },
+      "place": 1,
+      "salary": 3000,
+      "id": 11
     }
   ],
   "education": [
@@ -185,22 +221,85 @@
   ],
   "contracts": [
     {
-      "id":1,
-      "contractCode":"1",
-      "customerCode":"1",
-      "facilityCode":"1",
-      "startDay":"2002-12-30",
-      "endDay":"2003-01-12",
-      "deposit":1
+      "id": 1,
+      "contractCode": "1",
+      "customerCode": "3",
+      "facilityCode": "1",
+      "startDay": "2002-12-30",
+      "endDay": "2003-01-12",
+      "deposit": 1
     },
     {
-      "id":2,
-      "contractCode":"1",
-      "customerCode":"1",
-      "facilityCode":"1",
-      "startDay":"2002-12-30",
-      "endDay":"2003-01-12",
-      "deposit":1
+      "id": 2,
+      "contractCode": "1",
+      "customerCode": "2",
+      "facilityCode": "1",
+      "startDay": "2002-12-30",
+      "endDay": "2003-01-12",
+      "deposit": 1
+    },
+    {
+      "contractCode": "123",
+      "customerCode": "4",
+      "facilityCode": "1",
+      "startDay": "2023-03-10",
+      "endDay": "2023-03-30",
+      "deposit": 1,
+      "id": 3
+    },
+    {
+      "contractCode": "123",
+      "customerCode": "4",
+      "facilityCode": "1",
+      "startDay": "2023-03-23",
+      "endDay": "2023-03-22",
+      "deposit": 21421,
+      "id": 4
+    },
+    {
+      "contractCode": "123",
+      "customerCode": "2",
+      "facilityCode": "1",
+      "startDay": "2023-03-22",
+      "endDay": "2023-03-24",
+      "deposit": 312432,
+      "id": 5
+    },
+    {
+      "contractCode": "123",
+      "customerCode": "2",
+      "facilityCode": "1",
+      "startDay": "2023-03-22",
+      "endDay": "2023-03-24",
+      "deposit": 6070,
+      "id": 6
+    },
+    {
+      "contractCode": "123",
+      "customerCode": "6",
+      "facilityCode": "1",
+      "startDay": "2023-03-23",
+      "endDay": "2023-03-30",
+      "deposit": 7654,
+      "id": 7
+    },
+    {
+      "contractCode": "123",
+      "customerCode": "3",
+      "facilityCode": "1",
+      "startDay": "2023-03-22",
+      "endDay": "2023-03-23",
+      "deposit": 54000,
+      "id": 8
+    },
+    {
+      "contractCode": "1",
+      "customerCode": "2",
+      "facilityCode": "1",
+      "startDay": "2002-12-30",
+      "endDay": "2003-01-12",
+      "deposit": 1,
+      "id": 9
     }
   ]
 }

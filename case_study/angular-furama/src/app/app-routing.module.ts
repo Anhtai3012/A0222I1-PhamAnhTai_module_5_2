@@ -8,6 +8,7 @@ import {EmployeeList4Component} from "./employee/employee-list4/employee-list4.c
 import {CustomerSaveComponent} from "./customer/customer-save/customer-save.component";
 import {EmployeeSaveComponent} from "./employee/employee-save/employee-save.component";
 import {SaveFacilityComponent} from "./facility/save-facility/save-facility.component";
+import {SaveContractComponent} from "./contract/save-contract/save-contract.component";
 
 
 const routes: Routes = [
@@ -21,6 +22,9 @@ const routes: Routes = [
   {path:'employee/create',component:EmployeeSaveComponent},
   {path:'employee/edit/:id',component:EmployeeSaveComponent},
   {path:'facility/create',component:SaveFacilityComponent},
+  {path:'facility/edit/:id',component:SaveFacilityComponent},
+  {path:'contract/create',component:SaveContractComponent},
+  {path:'contract/edit/:id',component:SaveContractComponent},
 ];
 
 @NgModule({

@@ -45,7 +45,7 @@ export class CustomerListComponent implements OnInit {
   }
 
   deleteCustomer(id:number){
-    alertify.confirm("Remove Customer", "do you want remove this customer?", () => {
+    alertify.confirm("Remove Customer", "do you want remove this customer ?", () => {
       this.customerService.deleteCustomer(id).subscribe(r => {
         console.log("delete")
         this.ngOnInit();

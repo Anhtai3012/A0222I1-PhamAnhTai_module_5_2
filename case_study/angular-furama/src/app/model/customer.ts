@@ -3,7 +3,7 @@ export interface Customer {
   customerCode?:string;
   fullName?:string;
   phoneNumber?:string;
-  identifyNumber?:string;
+  identifyNumber?:number;
   email?:string;
   dateOfBirth?:Date;
 }

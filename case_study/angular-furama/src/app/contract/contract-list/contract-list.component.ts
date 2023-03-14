@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnChanges, OnInit, PipeTransform} from '@angular/core';
 import {Contract} from "../../model/contract";
 import {ContractService} from "../../service/contract.service";
 import {Customer} from "../../model/customer";
 import {Facility} from "../../model/facility";
+import alertify from "alertifyjs";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-contract-list',
@@ -10,12 +12,21 @@ import {Facility} from "../../model/facility";
   styleUrls: ['./contract-list.component.css']
 })
 export class ContractListComponent implements OnInit {
+
+  searchValue:string;
+
+  page: number = 1;
+  count: number = 0;
+  tableSize: number = 3;
+
   contracts : Contract[]=[];
   customers :Customer [] =[];
   facilitys :Facility [] =[];
-  constructor(private contractService:ContractService) { }
+  constructor(private contractService:ContractService,
+              private toast:ToastrService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {this.findAll()}
+  findAll(){
     this.contractService.getAll().subscribe((data)=>{
       this.contracts = data;
     })
@@ -27,11 +38,23 @@ export class ContractListComponent implements OnInit {
     })
   }
 
-  temp:number;
-  takeId(value:any) {
-    console.log(value)
-    this.temp=parseInt(value)
+  deleteContract(id:number){
+    alertify.confirm("Remove Contract", "do you want remove this contract?", () => {
+      this.contractService.deleteContract(id).subscribe((next) => {
+        console.log("delete")
+        this.ngOnInit()
+      });
+    }, function () {
+
+    })
+  }
+
+
+  onTableDataChange(event: any) {
+    this.page = event;
+    this.findAll();
   }
 
 
 }
+

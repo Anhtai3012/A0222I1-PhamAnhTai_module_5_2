@@ -25,4 +25,17 @@ export class ContractService {
   getAllCustomer():Observable<Customer[]> {
     return this.httpClient.get<Customer[]>(this.url_Customer)
   }
+
+  deleteContract(id:number):Observable<void>{
+   return this.httpClient.delete<void>(this.url+'/'+id);
+  }
+
+  createContract(contract :Contract):Observable<Contract> {
+   if (contract.id ==null) return this.httpClient.post(this.url,contract);
+   return this.httpClient.put<Contract>(this.url+'/'+contract.id,contract)
+  }
+
+  getById(id:number):Observable<Contract>{
+   return  this.httpClient.get<Contract>(this.url+'/'+id)
+  }
 }

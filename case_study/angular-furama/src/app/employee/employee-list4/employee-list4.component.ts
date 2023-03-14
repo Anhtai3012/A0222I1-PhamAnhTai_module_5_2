@@ -4,6 +4,7 @@ import {EmployeeService} from "../../service/employee.service";
 import {PositionEmployeeService} from "../../service/position-employee.service";
 import {PositionEmployee} from "../../model/position-employee";
 import * as alertify from 'alertifyjs'
+import {ToastrService} from "ngx-toastr";
 
 
 
@@ -21,7 +22,8 @@ export class EmployeeList4Component implements OnInit {
   employees:Employee []
   positions:PositionEmployee[] = [];
   constructor(private employeeService:EmployeeService,
-              private positionEmployeeService: PositionEmployeeService) {
+              private positionEmployeeService: PositionEmployeeService,
+              private toast:ToastrService) {
   }
 
   ngOnInit(): void {

@@ -15,7 +15,12 @@ export class CustomerService {
   }
 
   CreateCustomer(customer:Customer) :Observable<Customer>{
-    if(customer.id == null)return this.httpClient.post(this.url,customer);
+    console.log("hello");
+    console.log(customer)
+    // if(customer.id+"" == '')// use khi ko co disabled
+      if(customer.id == null){
+      return this.httpClient.post<Customer>("http://localhost:3000/customers",customer)
+    }
     return this.httpClient.put(`${this.url}${customer.id}`,customer)
   }
 

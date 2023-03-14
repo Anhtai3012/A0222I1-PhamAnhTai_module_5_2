@@ -3,24 +3,25 @@
 <div class="container">
   <div class="season one">
     <p class="text__one"> CONTRACT </p>
+    <input type="search" placeholder="Search" style="border-radius: 30px" [(ngModel)]="searchValue">
+
   </div>
-  <app-search ></app-search>
-  <button type="button" class="btn btn-success" style="margin-top: 20px">Add New</button>
+  <button type="button" class="btn btn-success" style="margin-top: 20px" routerLink="/contract/create">Add New</button>
   <table class="table table-hover">
     <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Code</th>
-      <th scope="col">Customer Code</th>
-      <th scope="col">Facility Code</th>
+      <th scope="col">Customer Name</th>
+      <th scope="col">Facility Name</th>
       <th scope="col">Start Day</th>
       <th scope="col">End Day</th>
       <th scope="col">Deposit</th>
       <th scope="col">Action</th>
     </tr>
     </thead>
-    <tbody *ngFor="let item of contracts , index as i">
-    <tr>
+    <tbody>
+    <tr *ngFor="let item of contracts| searchFilter :searchValue, index as i">
       <th scope="row">{{i+1}}</th>
       <td>{{item.contractCode}}</td>
       <td>
@@ -30,18 +31,32 @@
           </div>
         </ng-container>
       </td>
-      <td>{{item.facilityCode}}</td>
+      <td>
+        <ng-container *ngFor="let f of facilitys">
+          <div *ngIf="item.facilityCode == f.id">
+            <span>{{f.nameService}}</span>
+          </div>
+        </ng-container>
+      </td>
       <td>{{item.startDay | date:'dd-MM-yyyy'}}</td>
       <td>{{item.endDay | date:'dd-MM-yyyy'}}</td>
       <td>{{item.deposit | currency:"VND":true:'4.2-2'}}</td>
       <td>
-        <button type="button" class="btn btn-primary bi bi-pencil-square"></button>
-        <button type="button" class="btn btn-danger bi bi-trash" (click)="takeId(i)" data-toggle="modal" data-target="#delete"></button>
+        <button type="button" class="btn btn-primary bi bi-pencil-square" [routerLink]="['/contract/edit',item.id]"></button>
+        <button type="button" class="btn btn-danger bi bi-trash" (click)="deleteContract(item.id)"></button>
         <button type="button" class="btn btn-info bi bi-arrow-up-right-circle-fill" data-toggle="modal" data-target="#exampleModal"></button>
       </td>
     </tr>
     </tbody>
   </table>
+
+  <div class="d-flex justify-content-center">
+    <pagination-controls
+      previousLabel="Prev"
+      nextLabel="Next"
+      (pageChange)="onTableDataChange($event)">
+    </pagination-controls>
+
 </div>
 
 <!-- Modal -->
