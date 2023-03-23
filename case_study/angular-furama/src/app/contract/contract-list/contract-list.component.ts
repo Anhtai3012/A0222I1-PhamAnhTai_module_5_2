@@ -5,6 +5,7 @@ import {Customer} from "../../model/customer";
 import {Facility} from "../../model/facility";
 import alertify from "alertifyjs";
 import {ToastrService} from "ngx-toastr";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-contract-list',
@@ -13,23 +14,22 @@ import {ToastrService} from "ngx-toastr";
 })
 export class ContractListComponent implements OnInit {
 
-  searchValue:string;
-
+  formSearch :FormGroup
   page: number = 1;
-  count: number = 0;
   tableSize: number = 3;
+  configurationPage:any;
+
 
   contracts : Contract[]=[];
   customers :Customer [] =[];
   facilitys :Facility [] =[];
   constructor(private contractService:ContractService,
-              private toast:ToastrService) { }
+              private toast:ToastrService,
+              private builder:FormBuilder) { }
 
-  ngOnInit(): void {this.findAll()}
-  findAll(){
-    this.contractService.getAll().subscribe((data)=>{
-      this.contracts = data;
-    })
+  ngOnInit(): void {
+    this.formSearchAll()
+    this.getAllContract('','');
     this.contractService.getAllCustomer().subscribe((data) =>{
       this.customers = data
     })
@@ -37,6 +37,32 @@ export class ContractListComponent implements OnInit {
       this.facilitys = data
     })
   }
+  // findAll(){
+  //   // this.contractService.getAll().subscribe((data)=>{
+  //   //   this.contracts = data;
+  //   // })
+  //   this.getAllContract('');
+  // }
+
+  formSearchAll(){
+    this.formSearch = this.builder.group({
+      contractCode: this.builder.control(''),
+      deposit: this.builder.control('')
+    })
+  }
+
+  getAllContract(id,deposit){
+    this.contractService.searchGetAll(id,deposit).subscribe((data) =>{
+      this.contracts = data;
+      this.configurationPage ={
+        itemsPerPage: this.tableSize,
+        currentPage: this.page,
+        totalItems : this.contracts.length
+      }
+    })
+  }
+
+
 
   deleteContract(id:number){
     alertify.confirm("Remove Contract", "do you want remove this contract?", () => {
@@ -51,10 +77,23 @@ export class ContractListComponent implements OnInit {
 
 
   onTableDataChange(event: any) {
-    this.page = event;
-    this.findAll();
+
+   this.page=event
+
+
   }
 
+  searchAll(){
+    console.log( typeof this.formSearch.value.contractCode)
+    console.log( this.formSearch.value.contractCode)
+    console.log( typeof this.formSearch.value.deposit)
+    console.log( this.formSearch.value.deposit)
+    this.getAllContract(this.formSearch.value.contractCode.trim(),this.formSearch.value.deposit)
+  }
 
+  reset(){
+    this.formSearch.reset();
+    this.ngOnInit();
+  }
 }
 

@@ -1,0 +1,57 @@
+<div class="form">
+  <h2 id="registration">Create Employee</h2>
+  <form >
+    <div class="">
+      <label for="id">customerCode:</label>
+      <input type="text" class="form-control" id="id" formControlName="id" readonly>
+    </div>
+
+    <div class="">
+      <label for="contractCode">contract Code:</label>
+      <input type="text" class="form-control" id="contractCode" formControlName="contractCode">
+      <div class="form-text text-danger" >
+        Error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="customerCode">Customer Code:</label>
+      <select  class="form-control" id="customerCode" formControlName="customerCode">
+        <option></option>
+      </select>
+    </div>
+
+    <div class="">
+      <label for="facilityCode">Facility Code:</label>
+      <select  class="form-control" id="facilityCode" formControlName="facilityCode">
+        <option ></option>
+      </select>
+    </div>
+
+    <div class="">
+      <label for="startDay">startDay:</label>
+      <input type="date" class="form-control" id="startDay" formControlName="startDay">
+      <div class="form-text text-danger" >
+      </div>
+    </div>
+
+    <div class="">
+      <label for="endDay">endDay:</label>
+      <input type="date" class="form-control" id="endDay" formControlName="endDay" >
+      <div class="form-text text-danger" >
+        error
+      </div>
+    </div>
+
+    <div class="">
+      <label for="deposit">deposit:</label>
+      <input id="deposit" class="form-control" formControlName="deposit" type="number">
+      <div class="form-text text-danger" >
+        error
+      </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

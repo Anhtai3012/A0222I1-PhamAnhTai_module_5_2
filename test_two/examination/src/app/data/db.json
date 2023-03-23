@@ -1,0 +1,28 @@
+{
+  "cars": [
+    {
+      "id": 3,
+      "bienSo": 2345,
+      "loaiXe": "giuong nam",
+      "tenNhaXe": "mai linh",
+      "diemDi": "Da Nang",
+      "diemDen": "Quang Tri",
+      "sdt": "0905941637",
+      "email": "mkhanh@gmail.com",
+      "gioDi": "12:39",
+      "gioDen": "16:30"
+    },
+    {
+      "id": 4,
+      "bienSo": 1234,
+      "loaiXe": "giuong nam",
+      "tenNhaXe": "mai linh",
+      "diemDi": "Da Nang",
+      "diemDen": "Quang Tri",
+      "sdt": "0905941637",
+      "email": "mkhanh@gmail.com",
+      "gioDi": "12:39",
+      "gioDen": "16:30"
+    }
+  ]
+}

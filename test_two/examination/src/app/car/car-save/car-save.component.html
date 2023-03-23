@@ -1,0 +1,75 @@
+<div class="form">
+  <h2>Edit Xe</h2>
+  <form [formGroup]="formCar"  (ngSubmit)="submitCar()">
+    <div class="">
+      <label for="id">customerCode:</label>
+      <input type="text" class="form-control" id="id" formControlName="id" readonly hidden>
+    </div>
+
+    <div class="">
+      <label for="bienSo">bienSo:</label>
+      <input type="number" class="form-control" id="bienSo" formControlName="bienSo" readonly>
+      <p *ngIf="formCar.controls.bienSo.hasError('required') && formCar.controls.bienSo.touched" style="color: red">required</p>
+      <p *ngIf="formCar.controls.bienSo.hasError('min') && formCar.controls.bienSo.touched" style="color: red">không đc nhỏ hơn 0</p>
+      <p *ngIf="formCar.controls.bienSo.hasError('max') && formCar.controls.bienSo.touched" style="color: red">không đc lớn hơn 6000</p>
+    </div>
+
+    <div class="">
+      <label for="loaiXe">loaiXe:</label>
+      <input type="text" class="form-control" id="loaiXe" formControlName="loaiXe">
+      <p *ngIf="formCar.controls.loaiXe.hasError('required') && formCar.controls.loaiXe.touched" style="color: red">required</p>
+      <p *ngIf="formCar.controls.loaiXe.hasError('minlength') && formCar.controls.loaiXe.touched" style="color: red">tối thiểu 4 kí tự</p>
+    </div>
+
+    <div class="">
+      <label for="tenNhaXe">tenNhaXe:</label>
+      <input type="text" class="form-control" id="tenNhaXe" formControlName="tenNhaXe">
+      <p *ngIf="formCar.controls.tenNhaXe.hasError('required') && formCar.controls.tenNhaXe.touched" style="color: red">required</p>
+      <p *ngIf="formCar.controls.tenNhaXe.hasError('minlength') && formCar.controls.tenNhaXe.touched" style="color: red">tối thiểu 4 kí tự</p>
+    </div>
+
+    <div class="">
+      <label for="diemDi">diemDi:</label>
+      <input type="text" class="form-control" id="diemDi" formControlName="diemDi">
+      <p *ngIf="formCar.controls.diemDi.hasError('required') && formCar.controls.diemDi.touched" style="color: red">required</p>
+      <p *ngIf="formCar.controls.diemDi.hasError('minlength') && formCar.controls.diemDi.touched" style="color: red">tối thiểu 4 kí tự</p>
+    </div>
+
+    <div class="">
+      <label for="diemDen">diemDen:</label>
+      <input type="text" class="form-control" id="diemDen" formControlName="diemDen" >
+      <p *ngIf="formCar.controls.diemDen.hasError('required') && formCar.controls.diemDen.touched" style="color: red">required</p>
+      <p *ngIf="formCar.controls.diemDen.hasError('minlength') && formCar.controls.diemDen.touched" style="color: red">tối thiểu 4 kí tự</p>
+    </div>
+
+    <div class="">
+      <label for="sdt">sdt:</label>
+      <input id="sdt" class="form-control" formControlName="sdt" type="text">
+      <p *ngIf="formCar.controls.sdt.hasError('required') && formCar.controls.sdt.touched" style="color: red">required</p>
+      <p *ngIf="formCar.controls.sdt.hasError('pattern') && formCar.controls.sdt.touched" style="color: red">số điện thoại không hợp lệ</p>
+    </div>
+
+    <div class="">
+      <label for="email">email:</label>
+      <input id="email" class="form-control" formControlName="email" type="text">
+      <p *ngIf="formCar.controls.email.hasError('required') && formCar.controls.email.touched" style="color: red">required</p>
+      <p *ngIf="formCar.controls.email.hasError('email') && formCar.controls.email.touched" style="color: red">lỗi email</p>
+    </div>
+
+    <div class="">
+      <label for="gioDi">gioDi:</label>
+      <input id="gioDi" class="form-control" formControlName="gioDi" type="time">
+      <p *ngIf="formCar.controls.gioDi.hasError('required') && formCar.controls.gioDi.touched" style="color: red">required</p>
+    </div>
+
+    <div class="">
+      <label for="gioDen">gioDen:</label>
+      <input id="gioDen" class="form-control" formControlName="gioDen" type="time">
+      <p *ngIf="formCar.controls.gioDen.hasError('required') && formCar.controls.gioDen.touched" style="color: red">required</p>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-danger" routerLink="/">Cancel</button>
+  </form>
+</div>

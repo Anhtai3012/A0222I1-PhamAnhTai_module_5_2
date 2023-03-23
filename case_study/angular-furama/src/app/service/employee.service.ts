@@ -19,8 +19,14 @@ export class EmployeeService {
    }
 
    createEmployee(employee:Employee):Observable<Employee>{
-    if(employee.id == null) return this.httpClient.post<Employee>(this.url,employee)
-     return this.httpClient.put(`${this.url}/${employee.id}`,employee)
+    console.log("service employee")
+     console.log(employee.id)
+     console.log(typeof employee.id)
+    if(employee.id.toString() =='') {
+      console.log("post")
+      return this.httpClient.post<Employee>(this.url,employee)
+    }
+    else return this.httpClient.put(`${this.url}/${employee.id}`,employee)
    }
 
    deleteEmployee(id:number):Observable<void>{

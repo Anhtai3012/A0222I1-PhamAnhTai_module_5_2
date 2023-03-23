@@ -50,36 +50,9 @@
       "customerCode": "1234",
       "fullName": "Tai Pham",
       "phoneNumber": "0905941637",
-      "identifyNumber": 12312,
+      "identifyNumber": 123124546,
       "email": "mkhanhaa@gmail.com",
       "dateOfBirth": "2023-03-03"
-    },
-    {
-      "id": 8,
-      "customerCode": "1234",
-      "fullName": "Tai Pham",
-      "phoneNumber": "0905941637",
-      "identifyNumber": 123342,
-      "email": "mkhanhaa@gmail.com",
-      "dateOfBirth": "2023-03-22"
-    },
-    {
-      "id": 9,
-      "customerCode": "1234",
-      "fullName": "Tai Pham",
-      "phoneNumber": "0905941637",
-      "identifyNumber": 231421,
-      "email": "mkhanhaa@gmail.com",
-      "dateOfBirth": "2023-03-15"
-    },
-    {
-      "customerCode": "321",
-      "fullName": "Tai Pham",
-      "phoneNumber": "0905941637",
-      "identifyNumber": 2413421,
-      "email": "mkhanhaa@gmail.com",
-      "dateOfBirth": "2023-03-24",
-      "id": 10
     }
   ],
   "employees": [
@@ -94,7 +67,7 @@
         "id": 2,
         "name": "cao dang"
       },
-      "place": 3,
+      "place": "1",
       "salary": 3000
     },
     {
@@ -126,22 +99,23 @@
       "id": 8
     },
     {
-      "fullName": "Tai Pham",
-      "dateOfBirth": "2023-03-16",
-      "code": 312412,
+      "id": 12,
+      "fullName": "Le Duc Hieu",
+      "dateOfBirth": "2023-03-23",
+      "code": 878889,
       "numberPhone": 905941637,
-      "email": "mkhanhaa@gmail.com",
+      "email": "le12@gmail.com",
       "certificate": {
         "id": 3,
         "name": "đại học"
       },
-      "place": "3",
-      "salary": 6000,
-      "id": 9
+      "place": "4",
+      "salary": 7500
     },
     {
-      "fullName": "Tai Pham",
-      "dateOfBirth": "2023-03-23",
+      "id": 15,
+      "fullName": "Pham nguyen Bich Thuy",
+      "dateOfBirth": "2023-03-22",
       "code": 878889,
       "numberPhone": 905941637,
       "email": "mkhanhaa@gmail.com",
@@ -150,22 +124,63 @@
         "name": "đại học"
       },
       "place": "4",
-      "salary": 6000,
-      "id": 10
+      "salary": 124214
     },
     {
-      "fullName": "pham anh tai",
-      "dateOfBirth": "2002-12-30",
-      "code": 123,
-      "numberPhone": "0905941",
-      "email": "mkhanhaa@gamil.com",
+      "id": 16,
+      "fullName": "tra tan thuan",
+      "dateOfBirth": "2023-03-22",
+      "code": 878889,
+      "numberPhone": 905941637,
+      "email": "mkhanhaa@gmail.com",
       "certificate": {
-        "id": 3,
-        "name": "đại học"
+        "id": 2,
+        "name": "cao đẳng"
       },
-      "place": 1,
-      "salary": 3000,
-      "id": 11
+      "place": "4",
+      "salary": 6000
+    },
+    {
+      "id": 18,
+      "fullName": "Tai Pham",
+      "dateOfBirth": "2023-03-16",
+      "code": 153135,
+      "numberPhone": 905941637,
+      "email": "mkhanhaa@gmail.com",
+      "certificate": {
+        "id": 4,
+        "name": "sau đại học"
+      },
+      "place": "6",
+      "salary": 156
+    },
+    {
+      "id": 19,
+      "fullName": "Le Ngoc Tuan",
+      "dateOfBirth": "2023-03-21",
+      "code": 878889,
+      "numberPhone": 905941637,
+      "email": "mkhanhaa@gmail.com",
+      "certificate": {
+        "id": 2,
+        "name": "cao đẳng"
+      },
+      "place": "4",
+      "salary": 600000
+    },
+    {
+      "id": 20,
+      "fullName": "Tai Pham",
+      "dateOfBirth": "2023-03-23",
+      "code": 878889,
+      "numberPhone": 905941637,
+      "email": "mkhanhaa@gmail.com",
+      "certificate": {
+        "id": 2,
+        "name": "cao đẳng"
+      },
+      "place": "4",
+      "salary": 6000
     }
   ],
   "education": [
@@ -222,84 +237,75 @@
   "contracts": [
     {
       "id": 1,
-      "contractCode": "1",
+      "contractCode": "123",
       "customerCode": "3",
       "facilityCode": "1",
       "startDay": "2002-12-30",
       "endDay": "2003-01-12",
-      "deposit": 1
+      "deposit": 99999988
     },
     {
-      "id": 2,
-      "contractCode": "1",
-      "customerCode": "2",
-      "facilityCode": "1",
-      "startDay": "2002-12-30",
-      "endDay": "2003-01-12",
-      "deposit": 1
-    },
-    {
+      "id": 16,
       "contractCode": "123",
       "customerCode": "4",
       "facilityCode": "1",
-      "startDay": "2023-03-10",
-      "endDay": "2023-03-30",
-      "deposit": 1,
-      "id": 3
+      "startDay": "2023-03-24",
+      "endDay": "2023-03-18",
+      "deposit": 1
     },
     {
+      "id": 18,
+      "contractCode": "10",
+      "customerCode": "2",
+      "facilityCode": "1",
+      "startDay": "2023-03-23",
+      "endDay": "2023-03-25",
+      "deposit": 41243219999999
+    },
+    {
+      "id": 19,
       "contractCode": "123",
       "customerCode": "4",
       "facilityCode": "1",
-      "startDay": "2023-03-23",
-      "endDay": "2023-03-22",
-      "deposit": 21421,
-      "id": 4
+      "startDay": "2023-03-16",
+      "endDay": "2023-03-10",
+      "deposit": 13124
     },
     {
-      "contractCode": "123",
-      "customerCode": "2",
-      "facilityCode": "1",
-      "startDay": "2023-03-22",
-      "endDay": "2023-03-24",
-      "deposit": 312432,
-      "id": 5
-    },
-    {
-      "contractCode": "123",
-      "customerCode": "2",
-      "facilityCode": "1",
-      "startDay": "2023-03-22",
-      "endDay": "2023-03-24",
-      "deposit": 6070,
-      "id": 6
-    },
-    {
-      "contractCode": "123",
-      "customerCode": "6",
-      "facilityCode": "1",
-      "startDay": "2023-03-23",
-      "endDay": "2023-03-30",
-      "deposit": 7654,
-      "id": 7
-    },
-    {
+      "id": 22,
       "contractCode": "123",
       "customerCode": "3",
       "facilityCode": "1",
-      "startDay": "2023-03-22",
+      "startDay": "2023-03-18",
+      "endDay": "2023-03-17",
+      "deposit": 6788
+    },
+    {
+      "id": 23,
+      "contractCode": "123",
+      "customerCode": "3",
+      "facilityCode": "1",
+      "startDay": "2023-03-29",
+      "endDay": "2023-03-31",
+      "deposit": 12421
+    },
+    {
+      "id": 24,
+      "contractCode": "123",
+      "customerCode": "4",
+      "facilityCode": "1",
+      "startDay": "2023-03-23",
+      "endDay": "2023-03-24",
+      "deposit": 235423
+    },
+    {
+      "id": 25,
+      "contractCode": "123",
+      "customerCode": "4",
+      "facilityCode": "1",
+      "startDay": "2023-03-30",
       "endDay": "2023-03-23",
-      "deposit": 54000,
-      "id": 8
-    },
-    {
-      "contractCode": "1",
-      "customerCode": "2",
-      "facilityCode": "1",
-      "startDay": "2002-12-30",
-      "endDay": "2003-01-12",
-      "deposit": 1,
-      "id": 9
+      "deposit": 3500
     }
   ]
 }

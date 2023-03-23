@@ -36,7 +36,7 @@ export class CustomerSaveComponent implements OnInit {
 
   createCustomer(){
     this.registerForm = new FormGroup({
-      id: new FormControl({ value : this.customers == undefined ? '' : this.customers.id, disabled : true}),
+      id: new FormControl( this.customers == undefined ? null : this.customers.id),
       customerCode: new FormControl(this.customers == undefined? '':this.customers.customerCode,[
         Validators.required,
         Validators.min(1)
@@ -61,26 +61,29 @@ export class CustomerSaveComponent implements OnInit {
     });
   }
 
-  // submitCustomer() {
-  //   console.log(this.registerForm.value)
-  //   this.customerService.CreateCustomer(this.registerForm.value).subscribe(next => {
-  //     console.log(next)
-  //     console.log('thanh cong')
-  //     this.toast.success("them moi thanh cong")
-  //     this.router.navigateByUrl("/customer-list")
-  //   },error => {
-  //     console.log("error customer")
-  //   })
-  // }
-
   submitCustomer() {
-
-    this.customerService.CreateCustomer(this.registerForm.value).subscribe(next =>
-      this.router.navigateByUrl("/customer-list").then(result =>{
-        this.registerForm.reset()
+    console.log(this.registerForm.value)
+    if(this.registerForm.valid){
+      if (this.registerForm.value.id == null){
+    this.customerService.CreateCustomer(this.registerForm.value).subscribe(next => {
+      console.log(next)
+      console.log('thanh cong')
+      this.router.navigateByUrl("/customer-list").then((next) =>{
         this.toast.success("them moi thanh cong")
-        }
-      )
-    )
+      })
+    },error => {
+      console.log("error customer")
+    })
+      }else {
+        this.customerService.CreateCustomer(this.registerForm.value).subscribe((data) => {
+          this.router.navigateByUrl("/customer-list").then((next) => {
+            this.toast.success("chinh sua thanh cong")
+          })
+        })
+      }
+  } else {
+      this.toast.error("Lỗi")
+    }
   }
+
 }

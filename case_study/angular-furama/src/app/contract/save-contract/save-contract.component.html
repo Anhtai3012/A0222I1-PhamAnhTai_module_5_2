@@ -4,13 +4,13 @@
   <form [formGroup]="contractForm" (ngSubmit)="submitContract()">
     <div class="">
       <label for="id">customerCode:</label>
-      <input type="text" class="form-control" id="id" formControlName="id" >
+      <input type="text" class="form-control" id="id" formControlName="id" readonly>
     </div>
 
     <div class="">
       <label for="contractCode">contract Code:</label>
       <input type="text" class="form-control" id="contractCode" formControlName="contractCode">
-      <div class="form-text text-danger" *ngIf=" !this.contractForm.controls.contractCode?.valid && (this.contractForm.controls.contractCode?.touched || this.contractForm.controls.contractCode?.dirty)">
+      <div class="form-text text-danger" *ngIf=" !contractForm.controls.contractCode?.valid && (this.contractForm.controls.contractCode?.touched || this.contractForm.controls.contractCode?.dirty)">
         Error
       </div>
     </div>
@@ -32,7 +32,7 @@
     <div class="">
       <label for="startDay">startDay:</label>
       <input type="date" class="form-control" id="startDay" formControlName="startDay">
-      <div class="form-text text-danger" *ngIf="!this.contractForm.controls.startDay?.valid && (this.contractForm.controls.startDay?.touched || this.contractForm.controls.startDay?.dirty)">
+      <div class="form-text text-danger" *ngIf="!contractForm.controls.startDay?.valid && (this.contractForm.controls.startDay?.touched || this.contractForm.controls.startDay?.dirty)">
         error
       </div>
     </div>
@@ -40,7 +40,7 @@
     <div class="">
       <label for="endDay">endDay:</label>
       <input type="date" class="form-control" id="endDay" formControlName="endDay" >
-      <div class="form-text text-danger" *ngIf="!this.contractForm.controls.endDay?.valid && (this.contractForm.controls.endDay?.touched || this.contractForm.controls.endDay?.dirty)">
+      <div class="form-text text-danger" *ngIf="!contractForm.controls.endDay?.valid && (this.contractForm.controls.endDay?.touched || this.contractForm.controls.endDay?.dirty)">
         error
       </div>
     </div>
@@ -48,7 +48,7 @@
     <div class="">
       <label for="deposit">deposit:</label>
       <input id="deposit" class="form-control" formControlName="deposit" type="number">
-      <div class="form-text text-danger" *ngIf="!this.contractForm.controls.deposit?.valid && (this.contractForm.controls.deposit?.touched || this.contractForm.controls.deposit?.dirty)">
+      <div class="form-text text-danger" *ngIf="!contractForm.controls.deposit?.valid && (this.contractForm.controls.deposit?.touched || this.contractForm.controls.deposit?.dirty)">
         error
       </div>
     </div>

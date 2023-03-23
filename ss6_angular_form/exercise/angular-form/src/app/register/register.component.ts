@@ -17,8 +17,7 @@ export class RegisterComponent implements OnInit {
     this.registerForm = new FormGroup({
       firstname: new FormControl('',[
         Validators.minLength(2),
-        Validators.maxLength(10),
-        Validators.required
+        Validators.maxLength(10)
       ]),
       lastname: new FormControl('',[
         Validators.minLength(2),
@@ -96,12 +95,14 @@ export class RegisterComponent implements OnInit {
   }
 
   registerSubmit() {
-    if (this.Password.value === this.RepeatPassword.value){
-      console.log('submit')
-      console.log(this.registerForm)
-    }else {
-      this.repeatPass='inline'
-    }
+   if (this.registerForm.valid){
+     if (this.Password.value === this.RepeatPassword.value){
+       console.log('submit')
+       console.log(this.registerForm)
+     }else {
+       this.repeatPass='inline'
+     }
+   }
 
   }
 }

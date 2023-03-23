@@ -51,7 +51,7 @@ export class EmployeeSaveComponent implements OnInit {
   formEmployee() {
     console.log(this.employee)
     this.employeeForm = this.formBuilder.group({
-      id: this.formBuilder.control({value: this.employee == undefined ? '' : this.employee.id, disabled: true}),
+      id: this.formBuilder.control( this.employee == undefined ? '' : this.employee.id),
       fullName: this.formBuilder.control(this.employee == undefined ? '' : this.employee.fullName, Validators.required),
       dateOfBirth: this.formBuilder.control(this.employee == undefined ? '' : this.employee.dateOfBirth, Validators.required),
       code: this.formBuilder.control(this.employee == undefined ? '' : this.employee.code, Validators.required),
@@ -64,18 +64,32 @@ export class EmployeeSaveComponent implements OnInit {
   }
 
   submitEmployee() {
-    console.log('here')
-    console.log(this.employeeForm.value)
-    this.employeeService.createEmployee(this.employeeForm.value).subscribe((next) => {
+    //this.employeeForm.value.id
+    console.log(this.employeeForm)
+    if(this.employeeForm.valid || this.employeeForm.value.id){
+      console.log('here')
+      console.log(this.employeeForm)
+      console.log(this.employeeForm.value.id)
+      if (this.employeeForm.value.id == "" && this.employeeForm.value.id !=null ){
+    this.employeeService.createEmployee(this.employeeForm.value).subscribe((data) => {
+      console.log(data.id)
       this.router.navigateByUrl("/employee-list").then(result => {
-        if (next.id == null){
           this.toast.success("them moi thanh cong");
-        }else {
-          this.toast.success("chinh sua thanh cong");
-        }
-        this.employeeForm.reset()
+         return this.employeeForm.reset()
       })
     })
+      }else{
+        this.employeeService.createEmployee(this.employeeForm.value).subscribe((data) => {
+          this.router.navigateByUrl("/employee-list").then(result => {
+          this.toast.success("chinh sua thanh cong");
+            this.employeeForm.reset()
+          })
+        })
+      }
+    }else {
+      console.log(this.employeeForm.valid)
+      this.toast.error("lỖI")
+    }
   }
 
   compareFn(t1: any, t2: any): boolean {

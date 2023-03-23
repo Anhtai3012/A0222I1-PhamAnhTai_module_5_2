@@ -1,12 +1,22 @@
 <app-header>
 </app-header>
+
 <div class="container">
+
   <div class="season one">
     <p class="text__one"> CONTRACT </p>
-    <input type="search" placeholder="Search" style="border-radius: 30px" [(ngModel)]="searchValue">
-
   </div>
-  <button type="button" class="btn btn-success" style="margin-top: 20px" routerLink="/contract/create">Add New</button>
+
+  <form [formGroup]="formSearch" (ngSubmit)="searchAll()" style="margin-top: 20px">
+    <input type="search" placeholder="Search code" style="border-radius: 30px" formControlName="contractCode">
+    <input type="number" placeholder="Search deposit" style="border-radius: 30px ; margin-left: 10px" formControlName="deposit">
+    <button type="submit" class="btn-outline-success" style="border-radius: 50px;margin-left: 10px">Search</button>
+    <button type="button" class="btn-outline-danger" style="border-radius: 50px;margin-left: 10px" (click)="reset()">Reset</button>
+  </form>
+
+  <div>
+    <button type="button" class="btn btn-success" style="margin-top: 20px" routerLink="/contract/create">Add New</button>
+  </div>
   <table class="table table-hover">
     <thead>
     <tr>
@@ -21,7 +31,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let item of contracts| searchFilter :searchValue, index as i">
+    <tr *ngFor="let item of contracts | paginate:{ itemsPerPage : tableSize,currentPage:page}, index as i">
       <th scope="row">{{i+1}}</th>
       <td>{{item.contractCode}}</td>
       <td>
@@ -40,7 +50,7 @@
       </td>
       <td>{{item.startDay | date:'dd-MM-yyyy'}}</td>
       <td>{{item.endDay | date:'dd-MM-yyyy'}}</td>
-      <td>{{item.deposit | currency:"VND":true:'4.2-2'}}</td>
+      <td>{{item.deposit | currency:"VND":true:'4.3-3'}}</td>
       <td>
         <button type="button" class="btn btn-primary bi bi-pencil-square" [routerLink]="['/contract/edit',item.id]"></button>
         <button type="button" class="btn btn-danger bi bi-trash" (click)="deleteContract(item.id)"></button>
@@ -56,9 +66,8 @@
       nextLabel="Next"
       (pageChange)="onTableDataChange($event)">
     </pagination-controls>
-
-</div>
-
+  </div>
+</div>>
 <!-- Modal -->
 <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -79,6 +88,5 @@
     </div>
   </div>
 </div>
-
 <app-footer>
 </app-footer>

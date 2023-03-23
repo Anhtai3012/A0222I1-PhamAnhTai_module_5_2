@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div class="season one">
+    <p class="text__one"> Lô Hàng </p>
+  </div>
+
+<!--  <form  style="margin-top: 20px">-->
+<!--    <input type="search" placeholder="Search code" style="border-radius: 30px" formControlName="contractCode">-->
+<!--    <input type="number" placeholder="Search deposit" style="border-radius: 30px ; margin-left: 10px" formControlName="deposit">-->
+<!--    <button type="submit" class="btn-outline-success" style="border-radius: 50px;margin-left: 10px">Search</button>-->
+<!--    <button type="button" class="btn-outline-danger" style="border-radius: 50px;margin-left: 10px" >Reset</button>-->
+<!--  </form>-->
+
+  <div>
+    <button type="button" class="btn btn-success" style="margin-top: 20px" routerLink="/lohang/create">Add New</button>
+  </div>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Mã Lô Hàng</th>
+      <th scope="col">Tên Sản Phẩm</th>
+      <th scope="col">Giá Tiền</th>
+      <th scope="col">Đơn Vị</th>
+      <th scope="col">Số lượng</th>
+      <th scope="col">Ngày Nhập Hàng</th>
+      <th scope="col">Ngày Xuất Khẩu</th>
+      <th scope="col">Ngày Hết Hạng</th>
+      <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of lohang, index as i">
+      <th scope="row">{{i+1}}</th>
+      <td>{{item.code}}</td>
+      <td>{{item.product.manufacture}}</td>
+      <td>{{item.product.price}}</td>
+      <td>{{item.product.unit}}</td>
+      <td>{{item.quantity}}</td>
+      <td>{{item.startDay}}</td>
+      <td>{{item.productionDay}}</td>
+      <td>{{item.endDay}}</td>
+      <td>
+        <button type="button" class="btn btn-info">Sửa</button>
+        <button type="button" class="btn btn-danger">Xóa</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>>

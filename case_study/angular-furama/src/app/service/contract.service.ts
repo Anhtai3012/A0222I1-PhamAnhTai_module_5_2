@@ -30,12 +30,21 @@ export class ContractService {
    return this.httpClient.delete<void>(this.url+'/'+id);
   }
 
-  createContract(contract :Contract):Observable<Contract> {
-   if (contract.id ==null) return this.httpClient.post(this.url,contract);
-   return this.httpClient.put<Contract>(this.url+'/'+contract.id,contract)
+  createContract(contract :Contract):Observable<Contract>{
+   console.log('service')
+   console.log(contract.id)
+   if (contract.id == null){
+     return this.httpClient.post<Contract>(this.url,contract);
+   }
+    return this.httpClient.put<Contract>(this.url+'/'+contract.id,contract)
+
   }
 
   getById(id:number):Observable<Contract>{
    return  this.httpClient.get<Contract>(this.url+'/'+id)
+  }
+
+  searchGetAll(contractCode:string,deposit:any):Observable<Contract[]> {
+   return this.httpClient.get<Contract[]>(this.url+'?_sort=contractCode&_order=asc&contractCode_like='+contractCode+'&deposit_like='+deposit);
   }
 }
